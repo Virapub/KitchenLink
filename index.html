@@ -4,146 +4,146 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>KitchenLink | Smart Kitchen Gadgets</title>
+  <title>KitchenLink - Smart Gadgets Store</title>
   <style>
     body {
-      font-family: sans-serif;
-      background: #f4f4f4;
+      font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 0;
+      background-color: #fefefe;
+      color: #333;
     }
     header {
-      background: #ff6f00;
+      background-color: #2c3e50;
       color: white;
-      padding: 20px;
+      padding: 1em;
       text-align: center;
     }
     h1 {
       margin: 0;
+      font-size: 1.8em;
     }
-    .tagline {
-      font-size: 16px;
-      font-weight: normal;
+    .search {
+      text-align: center;
+      margin: 1em;
     }
-    .search-box {
-      display: flex;
-      justify-content: center;
-      margin: 20px;
-    }
-    .search-box input {
-      width: 80%;
+    input[type="text"] {
+      width: 90%;
       max-width: 400px;
       padding: 10px;
       border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 16px;
+      font-size: 1em;
     }
     .products {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 16px;
-      padding: 20px;
+      gap: 1em;
+      padding: 1em;
     }
-    .card {
+    .product {
       background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      max-width: 300px;
-      padding: 16px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      width: 250px;
+      padding: 1em;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
       text-align: center;
+      transition: transform 0.3s;
     }
-    .card img {
+    .product:hover {
+      transform: translateY(-5px);
+    }
+    .product img {
       width: 100%;
       height: auto;
       border-radius: 8px;
     }
-    .price {
-      font-size: 18px;
-      margin: 8px 0;
-      color: #333;
+    .title {
+      font-size: 1.1em;
+      margin: 0.5em 0;
+      font-weight: bold;
     }
-    .btn {
-      background: #ff6f00;
-      color: white;
-      padding: 10px 16px;
-      border: none;
-      border-radius: 8px;
-      text-decoration: none;
+    .price {
+      color: #16a085;
+      margin: 0.5em 0;
+    }
+    .buy {
       display: inline-block;
-      margin-top: 10px;
+      padding: 0.6em 1.2em;
+      background: #e67e22;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
       font-weight: bold;
     }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>KitchenLink</h1>
-    <div class="tagline">Smart. Eco-friendly. Must-Have Gadgets.</div>
+    <h1>KitchenLink – Smart Kitchen Gadgets</h1>
+    <p>Your one-stop shop for smart & affordable tools</p>
   </header>
 
-  <div class="search-box">
-    <input type="text" id="searchInput" placeholder="Search for a gadget..." onkeyup="searchProducts()">
+  <div class="search">
+    <input type="text" id="searchInput" placeholder="Search gadgets...">
   </div>
 
-  <section class="products" id="productList">
-
-    <div class="card">
-      <img src="https://m.media-amazon.com/images/I/414ly0wsjYL._SL1000_.jpg" alt="Philips Air Fryer">
-      <h2 class="title">PHILIPS Air Fryer</h2>
-      <div class="price">₹9,495</div>
-      <a class="btn" href="https://amzn.to/4kgzH4R" target="_blank">Buy Now</a>
+  <div class="products" id="productList">
+    <div class="product" data-name="Philips Air Fryer">
+      <img src="https://m.media-amazon.com/images/I/414ly0wsjYL._SL1000_.jpg" alt="Air Fryer">
+      <div class="title">PHILIPS Air Fryer</div>
+      <div class="price">Upto ₹10,000</div>
+      <a href="https://amzn.to/4kgzH4R" class="buy" target="_blank">Buy Now</a>
     </div>
 
-    <div class="card">
+    <div class="product" data-name="Sliding Tray">
       <img src="https://m.media-amazon.com/images/I/61rUIJtyEkL._UF1000,1000_QL80_FMwebp_.jpg" alt="Sliding Tray">
-      <h2 class="title">Sliding Tray</h2>
-      <div class="price">₹749</div>
-      <a class="btn" href="https://amzn.to/3SS1XQ4" target="_blank">Buy Now</a>
+      <div class="title">Sliding Tray</div>
+      <div class="price">Under ₹1,000</div>
+      <a href="https://amzn.to/3SS1XQ4" class="buy" target="_blank">Buy Now</a>
     </div>
 
-    <div class="card">
+    <div class="product" data-name="Vacuum Sealer">
       <img src="https://m.media-amazon.com/images/I/71QkgEBOZiL._UF894,1000_QL80_FMwebp_.jpg" alt="Vacuum Sealer">
-      <h2 class="title">Vacuum Sealer</h2>
-      <div class="price">₹2,199</div>
-      <a class="btn" href="https://amzn.to/3SVcs54" target="_blank">Buy Now</a>
+      <div class="title">Vacuum Sealer</div>
+      <div class="price">Upto ₹2,500</div>
+      <a href="https://amzn.to/3SVcs54" class="buy" target="_blank">Buy Now</a>
     </div>
 
-    <div class="card">
+    <div class="product" data-name="Mini Sealing Machine">
       <img src="https://m.media-amazon.com/images/I/71utCY3f-JL._UF894,1000_QL80_FMwebp_.jpg" alt="Mini Sealing Machine">
-      <h2 class="title">Mini Sealing Machine</h2>
-      <div class="price">₹349</div>
-      <a class="btn" href="https://amzn.to/4k1PTqE" target="_blank">Buy Now</a>
+      <div class="title">Mini Sealing Machine</div>
+      <div class="price">Under ₹500</div>
+      <a href="https://amzn.to/4k1PTqE" class="buy" target="_blank">Buy Now</a>
     </div>
 
-    <div class="card">
+    <div class="product" data-name="Kitchen Mat">
       <img src="https://m.media-amazon.com/images/I/619hMFvYSoL._UF894,1000_QL80_FMwebp_.jpg" alt="Kitchen Mat">
-      <h2 class="title">Kitchen Mat</h2>
-      <div class="price">₹599</div>
-      <a class="btn" href="https://amzn.to/3HG0ry2" target="_blank">Buy Now</a>
+      <div class="title">Kitchen Mat</div>
+      <div class="price">Under ₹700</div>
+      <a href="https://amzn.to/3HG0ry2" class="buy" target="_blank">Buy Now</a>
     </div>
 
-    <div class="card">
+    <div class="product" data-name="Knife Sharpener">
       <img src="https://m.media-amazon.com/images/I/610WnGc6kPL._UF894,1000_QL80_FMwebp_.jpg" alt="Knife Sharpener">
-      <h2 class="title">Knife Sharpener</h2>
-      <div class="price">₹249</div>
-      <a class="btn" href="https://amzn.to/45TExRW" target="_blank">Buy Now</a>
+      <div class="title">Knife Sharpener</div>
+      <div class="price">Under ₹300</div>
+      <a href="https://amzn.to/45TExRW" class="buy" target="_blank">Buy Now</a>
     </div>
-
-  </section>
+  </div>
 
   <script>
-    function searchProducts() {
-      const input = document.getElementById("searchInput").value.toLowerCase();
-      const cards = document.querySelectorAll(".card");
-      
-      cards.forEach(card => {
-        const title = card.querySelector(".title").textContent.toLowerCase();
-        card.style.display = title.includes(input) ? "block" : "none";
-      });
-    }
-  </script>
+    const input = document.getElementById('searchInput');
+    const products = document.querySelectorAll('.product');
 
+    input.addEventListener('input', () => {
+      const query = input.value.toLowerCase();
+      products.forEach(product => {
+        const name = product.getAttribute('data-name').toLowerCase();
+        product.style.display = name.includes(query) ? 'block' : 'none';
+      });
+    });
+  </script>
 </body>
 </html>
