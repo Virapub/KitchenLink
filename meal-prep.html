@@ -5,94 +5,166 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Budget Meal Prep – KitchenLink</title>
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #fdfdfd;
-      color: #333;
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fefefe;
+      color: #333;
+      line-height: 1.6;
+    }
+
     header {
       background: #ff6f61;
       color: white;
       text-align: center;
-      padding: 20px;
+      padding: 30px 20px;
     }
+
     h1 {
-      margin: 0;
-      font-size: 28px;
+      font-size: 26px;
     }
+
+    nav {
+      background: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+      flex-wrap: wrap;
+    }
+
+    nav .logo {
+      font-weight: bold;
+      font-size: 20px;
+      color: #ff6f61;
+    }
+
+    nav .links a {
+      margin-left: 15px;
+      text-decoration: none;
+      color: #333;
+      font-size: 16px;
+    }
+
+    nav .links a.active {
+      font-weight: bold;
+      color: #ff6f61;
+    }
+
     .container {
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
       padding: 20px;
     }
-    .meal-table {
+
+    table {
       width: 100%;
       border-collapse: collapse;
       margin-top: 20px;
-      background: #fff;
     }
-    .meal-table th,
-    .meal-table td {
-      border: 1px solid #ccc;
+
+    th, td {
+      border: 1px solid #ddd;
       padding: 12px;
       text-align: center;
+      font-size: 15px;
     }
-    .meal-table th {
-      background-color: #ffebee;
-      font-weight: bold;
+
+    th {
+      background-color: #fff3f3;
     }
+
     .gadget {
-      background: #fff5f5;
+      background: #fff7f7;
       padding: 15px;
-      border-radius: 10px;
+      border-radius: 12px;
       margin: 20px 0;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      box-shadow: 0 0 8px rgba(0,0,0,0.05);
     }
+
     .gadget h3 {
-      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 20px;
     }
+
     .gadget img {
       width: 100%;
-      max-width: 300px;
+      max-width: 280px;
+      display: block;
+      margin-bottom: 10px;
       border-radius: 8px;
     }
+
     .buy-btn {
       display: inline-block;
-      margin-top: 10px;
       background: #28a745;
       color: white;
       padding: 10px 18px;
-      border-radius: 5px;
       text-decoration: none;
+      border-radius: 6px;
       font-weight: bold;
+      font-size: 15px;
     }
+
     footer {
       text-align: center;
-      font-size: 14px;
       padding: 20px;
       background: #eee;
+      font-size: 14px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 20px;
+      }
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav .links {
+        margin-top: 10px;
+      }
+      nav .links a {
+        display: block;
+        margin: 6px 0;
+      }
+      th, td {
+        font-size: 13px;
+        padding: 8px;
+      }
+      .buy-btn {
+        width: 100%;
+        text-align: center;
+      }
     }
   </style>
 </head>
 <body>
-<nav style="background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 10px 20px; display: flex; justify-content: space-between; align-items: center;">
-  <div style="font-weight: bold; color: #ff6f61; font-size: 20px;">KitchenLink</div>
-  <div>
-    <a href="index.html" style="margin: 0 10px; text-decoration: none; color: #333;">Home</a>
-    <a href="index.html#products" style="margin: 0 10px; text-decoration: none; color: #333;">Products</a>
-    <a href="meal-prep.html" style="margin: 0 10px; text-decoration: none; color: #ff6f61; font-weight: bold;">Meal Plan</a>
-  </div>
-</nav>
+
+  <nav>
+    <div class="logo">KitchenLink</div>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="index.html#products">Products</a>
+      <a href="meal-prep.html" class="active">Meal Plan</a>
+    </div>
+  </nav>
+
   <header>
-    <h1>Smart Budget Meal Plan – Under ₹150/Day</h1>
-    <p>Prep smarter, not harder – with KitchenLink gadgets</p>
+    <h1>Budget Meal Prep – Under ₹150/Day</h1>
+    <p>Plan smart. Save time. Eat better!</p>
   </header>
 
   <div class="container">
-    <h2>🍱 5-Day Meal Prep Chart</h2>
-    <table class="meal-table">
+    <h2>🍱 5-Day Smart Meal Plan</h2>
+    <table>
       <tr>
         <th>Day</th>
         <th>Breakfast</th>
@@ -131,33 +203,32 @@
       </tr>
     </table>
 
-    <h2>🔧 Recommended Smart Gadgets</h2>
+    <h2>🛠️ Recommended Kitchen Gadgets</h2>
 
     <div class="gadget">
       <h3>🔪 Vegetable Chopper – ₹299</h3>
       <img src="https://m.media-amazon.com/images/I/71utCY3f-JL._UF894,1000_QL80_FMwebp_.jpg" alt="Vegetable Chopper" />
-      <p>Chop all your veggies in seconds – perfect for busy mornings.</p>
-      <a href="https://amzn.to/4k1PTqE" target="_blank" class="buy-btn">Buy Now</a>
+      <p>Cut your chopping time in half. Prep veggies in seconds!</p>
+      <a href="https://amzn.to/4k1PTqE" class="buy-btn" target="_blank">Buy Now</a>
     </div>
 
     <div class="gadget">
-      <h3>🧼 Smart Soap Dispenser – ₹499</h3>
+      <h3>🧼 Touchless Soap Dispenser – ₹499</h3>
       <img src="https://m.media-amazon.com/images/I/81LUFTHo1OL._SL1500_.jpg" alt="Soap Dispenser" />
-      <p>Touchless hygiene for your kitchen & bathroom.</p>
-      <a href="https://amzn.to/4ldjkra" target="_blank" class="buy-btn">Buy Now</a>
+      <p>Touch-free hygiene for your modern kitchen and bathroom.</p>
+      <a href="https://amzn.to/4ldjkra" class="buy-btn" target="_blank">Buy Now</a>
     </div>
 
     <div class="gadget">
-      <h3>🍱 Electric Lunch Box – ₹999</h3>
+      <h3>🍱 Portable Electric Lunch Box – ₹999</h3>
       <img src="https://m.media-amazon.com/images/I/61p6deNk4rL._SL1185_.jpg" alt="Electric Lunch Box" />
-      <p>Carry hot homemade meals to work – USB charging included!</p>
-      <a href="https://amzn.to/40sH4ik" target="_blank" class="buy-btn">Buy Now</a>
+      <p>Carry fresh hot meals anywhere – USB rechargeable & leakproof.</p>
+      <a href="https://amzn.to/40sH4ik" class="buy-btn" target="_blank">Buy Now</a>
     </div>
-
   </div>
 
   <footer>
-    &copy; 2025 KitchenLink. All rights reserved.
+    &copy; 2025 KitchenLink | Smart Gadgets for Modern Homes
   </footer>
 
 </body>
