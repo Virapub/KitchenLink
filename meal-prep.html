@@ -190,21 +190,22 @@
 </head>
 <body>
   <nav role="navigation">
-    <div class="nav-container">
-      <div class="logo" aria-label="KitchenLink Logo">KitchenLink</div>
-      <button class="hamburger" aria-label="Toggle menu">☰</button>
-      <div class="links">
-        <a href="index.html">Home</a>
-        <a href="index.html#products">Products</a>
-        <a href="meal-prep.html" class="active">Meal Plan</a>
-        <ul>
-          <li>
-            <a href="office-meal-plan.html">Office Meal Plan</a></li>
-        </ul>
-            
+  <div class="nav-container">
+    <div class="logo" aria-label="KitchenLink Logo">KitchenLink</div>
+    <button class="hamburger" aria-label="Toggle menu">☰</button>
+    <div class="links">
+      <a href="index.html" class="active">Home</a>
+      <a href="index.html#products">Products</a>
+      <div class="dropdown">
+        <a href="meal-prep.html">Meal Plans ▾</a>
+        <div class="dropdown-content">
+          <a href="meal-prep.html">Budget Plan</a>
+          <a href="office-meal-plan.html">Office Plan</a>
+        </div>
       </div>
     </div>
-  </nav>
+  </div>
+</nav>
 
   <header role="banner">
     <h1>Budget Meal Prep – Under ₹150/Day</h1>
