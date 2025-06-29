@@ -12,224 +12,268 @@
     }
 
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #fefefe;
-      color: #333;
-      line-height: 1.6;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f9fafb;
+      color: #1f2a44;
+      line-height: 1.7;
     }
 
     header {
-      background: #ff6f61;
+      background: linear-gradient(135deg, #ff6f61 0%, #e63946 100%);
       color: white;
       text-align: center;
-      padding: 30px 20px;
+      padding: 3rem 1.5rem;
     }
 
     h1 {
-      font-size: 26px;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      color: #ff6f61;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1rem;
+      max-width: 700px;
+      margin: 0 auto;
     }
 
     nav {
-      background: #fff;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      background: #ffffff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 1rem 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav .nav-container {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 12px 20px;
-      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     nav .logo {
-      font-weight: bold;
-      font-size: 20px;
+      font-size: 1.5rem;
+      font-weight: 700;
       color: #ff6f61;
+    }
+
+    nav .links {
+      display: flex;
+      gap: 1.5rem;
     }
 
     nav .links a {
-      margin-left: 15px;
       text-decoration: none;
-      color: #333;
-      font-size: 16px;
+      color: #1f2a44;
+      font-size: 1rem;
+      transition: color 0.3s ease;
     }
 
+    nav .links a:hover,
     nav .links a.active {
-      font-weight: bold;
       color: #ff6f61;
+      font-weight: 600;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 1.5rem;
+      background: none;
+      border: none;
+      color: #ff6f61;
+      cursor: pointer;
     }
 
     .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 20px;
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
     }
 
     table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 20px;
+      margin-top: 1.5rem;
+      background: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
 
     th, td {
-      border: 1px solid #ddd;
-      padding: 12px;
+      border: 1px solid #e5e7eb;
+      padding: 1rem;
       text-align: center;
-      font-size: 15px;
+      font-size: 0.95rem;
     }
 
     th {
-      background-color: #fff3f3;
+      background: #fff3f3;
+      color: #1f2a44;
+      font-weight: 600;
     }
 
-    .gadget {
-      background: #fff7f7;
-      padding: 15px;
-      border-radius: 12px;
-      margin: 20px 0;
-      box-shadow: 0 0 8px rgba(0,0,0,0.05);
+    tr:nth-child(even) {
+      background: #f9fafb;
     }
 
-    .gadget h3 {
-      margin-bottom: 10px;
-      font-size: 20px;
-    }
-
-    .gadget img {
-      width: 100%;
-      max-width: 280px;
-      display: block;
-      margin-bottom: 10px;
-      border-radius: 8px;
-    }
-
-    .buy-btn {
-      display: inline-block;
-      background: #28a745;
-      color: white;
-      padding: 10px 18px;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-      font-size: 15px;
+    section {
+      margin-bottom: 3rem;
     }
 
     footer {
       text-align: center;
-      padding: 20px;
-      background: #eee;
-      font-size: 14px;
-      margin-top: 40px;
+      padding: 1.5rem;
+      background: #e5e7eb;
+      font-size: 0.9rem;
+      color: #4b5563;
+      margin-top: 2rem;
     }
 
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 20px;
-      }
-      nav {
-        flex-direction: column;
-        align-items: flex-start;
-      }
+    /* Mobile Menu */
+    @media (max-width: 768px) {
       nav .links {
-        margin-top: 10px;
-      }
-      nav .links a {
-        display: block;
-        margin: 6px 0;
-      }
-      th, td {
-        font-size: 13px;
-        padding: 8px;
-      }
-      .buy-btn {
+        display: none;
+        flex-direction: column;
         width: 100%;
-        text-align: center;
+        padding: 1rem 0;
+      }
+
+      nav .links.active {
+        display: flex;
+      }
+
+      nav .hamburger {
+        display: block;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      h2 {
+        font-size: 1.25rem;
+      }
+
+      th, td {
+        font-size: 0.85rem;
+        padding: 0.75rem;
+      }
+
+      table {
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.25rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+      }
+
+      th, td {
+        font-size: 0.8rem;
+        padding: 0.5rem;
       }
     }
   </style>
 </head>
 <body>
-
-  <nav>
-    <div class="logo">KitchenLink</div>
-    <div class="links">
-      <a href="index.html">Home</a>
-      <a href="index.html#products">Products</a>
-      <a href="meal-prep.html" class="active">Meal Plan</a>
+  <nav role="navigation">
+    <div class="nav-container">
+      <div class="logo" aria-label="KitchenLink Logo">KitchenLink</div>
+      <button class="hamburger" aria-label="Toggle menu">☰</button>
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="index.html#products">Products</a>
+        <a href="meal-prep.html" class="active">Meal Plan</a>
+      </div>
     </div>
   </nav>
 
-  <header>
+  <header role="banner">
     <h1>Budget Meal Prep – Under ₹150/Day</h1>
     <p>Plan smart. Save time. Eat better!</p>
   </header>
 
-  <div class="container">
-    <h2>🍱 5-Day Smart Meal Plan</h2>
-    <table>
-      <tr>
-        <th>Day</th>
-        <th>Breakfast</th>
-        <th>Lunch</th>
-        <th>Dinner</th>
-      </tr>
-      <tr>
-        <td>Monday</td>
-        <td>Poha + Tea</td>
-        <td>Rice + Dal + Veg</td>
-        <td>Chapati + Mixed Sabzi</td>
-      </tr>
-      <tr>
-        <td>Tuesday</td>
-        <td>Idli + Chutney</td>
-        <td>Veg Pulao + Raita</td>
-        <td>Chapati + Paneer Bhurji</td>
-      </tr>
-      <tr>
-        <td>Wednesday</td>
-        <td>Upma + Filter Coffee</td>
-        <td>Khichdi + Pickle</td>
-        <td>Rice + Rajma</td>
-      </tr>
-      <tr>
-        <td>Thursday</td>
-        <td>Bread + Peanut Butter</td>
-        <td>Veg Sandwich + Juice</td>
-        <td>Chapati + Aloo Curry</td>
-      </tr>
-      <tr>
-        <td>Friday</td>
-        <td>Oats + Banana</td>
-        <td>Lemon Rice + Curd</td>
-        <td>Roti + Chana Masala</td>
-      </tr>
-    </table>
+  <main class="container" role="main">
+    <section>
+      <h2>💡 Why Meal Prep?</h2>
+      <p>
+        Planning your meals helps you save money, reduce food waste, and stay stress-free during busy weeks.
+        This 5-day vegetarian plan is designed for students, professionals, and anyone who wants to eat well without spending too much.
+      </p>
+    </section>
 
-    <h2>🛠️ Recommended Kitchen Gadgets</h2>
+    <section>
+      <h2>🍱 5-Day Budget Meal Plan</h2>
+      <table role="grid">
+        <thead>
+          <tr>
+            <th scope="col">Day</th>
+            <th scope="col">Breakfast</th>
+            <th scope="col">Lunch</th>
+            <th scope="col">Dinner</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Monday</td>
+            <td>Poha + Tea</td>
+            <td>Rice + Dal + Veg</td>
+            <td>Chapati + Mixed Sabzi</td>
+          </tr>
+          <tr>
+            <td>Tuesday</td>
+            <td>Idli + Chutney</td>
+            <td>Veg Pulao + Raita</td>
+            <td>Chapati + Paneer Bhurji</td>
+          </tr>
+          <tr>
+            <td>Wednesday</td>
+            <td>Upma + Filter Coffee</td>
+            <td>Khichdi + Pickle</td>
+            <td>Rice + Rajma</td>
+          </tr>
+          <tr>
+            <td>Thursday</td>
+            <td>Bread + Peanut Butter</td>
+            <td>Veg Sandwich + Juice</td>
+            <td>Chapati + Aloo Curry</td>
+          </tr>
+          <tr>
+            <td>Friday</td>
+            <td>Oats + Banana</td>
+            <td>Lemon Rice + Curd</td>
+            <td>Roti + Chana Masala</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
 
-    <div class="gadget">
-      <h3>🔪 Vegetable Chopper – ₹299</h3>
-      <img src="https://m.media-amazon.com/images/I/71utCY3f-JL._UF894,1000_QL80_FMwebp_.jpg" alt="Vegetable Chopper" />
-      <p>Cut your chopping time in half. Prep veggies in seconds!</p>
-      <a href="https://amzn.to/4k1PTqE" class="buy-btn" target="_blank">Buy Now</a>
-    </div>
-
-    <div class="gadget">
-      <h3>🧼 Touchless Soap Dispenser – ₹499</h3>
-      <img src="https://m.media-amazon.com/images/I/81LUFTHo1OL._SL1500_.jpg" alt="Soap Dispenser" />
-      <p>Touch-free hygiene for your modern kitchen and bathroom.</p>
-      <a href="https://amzn.to/4ldjkra" class="buy-btn" target="_blank">Buy Now</a>
-    </div>
-
-    <div class="gadget">
-      <h3>🍱 Portable Electric Lunch Box – ₹999</h3>
-      <img src="https://m.media-amazon.com/images/I/61p6deNk4rL._SL1185_.jpg" alt="Electric Lunch Box" />
-      <p>Carry fresh hot meals anywhere – USB rechargeable & leakproof.</p>
-      <a href="https://amzn.to/40sH4ik" class="buy-btn" target="_blank">Buy Now</a>
-    </div>
-  </div>
-
-  <footer>
-    &copy; 2025 KitchenLink | Smart Gadgets for Modern Homes
+  <footer role="contentinfo">
+    © 2025 KitchenLink | Smart Content for Smart Homes
   </footer>
 
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      hamburger.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+    });
+  </script>
 </body>
 </html>
