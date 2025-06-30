@@ -1,8 +1,17 @@
 // data.js
 const data = {
     products: [
-        { id: "philips-air-fryer", name: "Philips Air Fryer", price: "Up to ₹10,000", url: "https://amzn.to/4kgzH4R", image: "https://m.media-amazon.com/images/I/414ly0wsjYL._SL1000_.jpg", page: "index.html#philips-air-fryer" },
-        // अन्य प्रोडक्ट्स यहाँ जोड़ें
+        { id: "philips-air-fryer", name: "Philips Air Fryer", price: "Up to ₹10,000", url: "https://amzn.to/4kgzH4R", image: "https://m.media-amazon.com/images/I/414ly0wsjYL._SL1000_.jpg", page: "products.html#philips-air-fryer" },
+        { id: "Sliding Tray", name: "Sliding Tray", price: "Under ₹1,000", url: "https://amzn.to/3SS1XQ4", image: "https://m.media-amazon.com/images/I/61rUIJtyEkL._UF1000,1000_QL80_FMwebp_.jpg", page: "products.html#Sliding Tray" }
+    { id: "Vacuum Sealer", name: "Vacuum Sealer", price: "Up to ₹3,000", url: "https://amzn.to/3SVcs54", image: "https://m.media-amazon.com/images/I/71QkgEBOZiL._UF894,1000_QL80_FMwebp_.jpg", page: "products.html#Vacuum Sealer" }
+    { id: "Mini Sealing Machine", name: "Mini Sealing Machine", price: "Under ₹5,00", url: "https://amzn.to/4k1PTqE", image: "https://m.media-amazon.com/images/I/71utCY3f-JL._UF894,1000_QL80_FMwebp_.jpg", page: "products.html#Mini Sealing Machine" }
+    { id: "Kitchen Mat", name: "Kitchen Mat", price: "Upto ₹1,000", url: "https://amzn.to/3HG0ry2", image: "https://m.media-amazon.com/images/I/619hMFvYSoL._UF894,1000_QL80_FMwebp_.jpg", page: "products.html#Kitchen Mat" }
+    { id: "Knife Sharpener", name: "Knife Sharpener", price: "Under ₹500", url: "https://amzn.to/45TExRW", image: "https://m.media-amazon.com/images/I/610WnGc6kPL._UF894,1000_QL80_FMwebp_.jpg", page: "products.html#Knife Sharpener" }
+    { id: "#", name: "#", price: "Up to ₹#", url: "https://amzn.to/#", image: "https://m.media-amazon.com/images/I/#.jpg", page: "products.html#product" }
+    { id: "#", name: "#", price: "Up to ₹#", url: "https://amzn.to/#", image: "https://m.media-amazon.com/images/I/#.jpg", page: "products.html#product" }
+    { id: "#", name: "#", price: "Up to ₹#", url: "https://amzn.to/#", image: "https://m.media-amazon.com/images/I/#.jpg", page: "products.html#product" }
+    
+    // अन्य प्रोडक्ट्स यहाँ जोड़ें
     ],
     mealPlans: {
         office: [
@@ -21,3 +30,4 @@ const data = {
         ],
     },
 };
+
