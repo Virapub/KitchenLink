@@ -2,7 +2,7 @@ const data = {
     products: [
         { id: "philips-air-fryer", name: "Philips Air Fryer", price: "Up to ₹10,000", url: "https://amzn.to/4kgzH4R", image: "https://m.media-amazon.com/images/I/414ly0wsjYL._SL1000_.jpg", page: "products.html#philips-air-fryer" },
         { id: "sliding-tray", name: "Sliding Tray", price: "Under ₹1,000", url: "https://amzn.to/3SS1XQ4", image: "https://m.media-amazon.com/images/I/61rUIJtyEkL._UF1000,1000_QL80_FMwebp_.jpg", page: "products.html#sliding-tray" },
-        { id: "vacuum-sealer", name: "Vacuum Sealer", price: "Up to ₹3,000", url: "https://amzn.to/3SVcs54", image: "https://m.media-amazon.com/images/I/71QkgEBOZiL._UF894,1000_QL80_FMwebp_.jpg", page: "products.html#vacuum-sealer" },
+        { id: "vaccum-sealer", name: "Vaccum Sealer", price: "Up to ₹3,000", url: "https://amzn.to/3SVcs54", image: "https://m.media-amazon.com/images/I/71QkgEBOZiL._UF894,1000_QL80_FMwebp_.jpg", page: "products.html#vaccum-sealer" },
         { id: "mini-sealing-machine", name: "Mini Sealing Machine", price: "Under ₹500", url: "https://amzn.to/4k1PTqE", image: "https://m.media-amazon.com/images/I/71utCY3f-JL._UF894,1000_QL80_FMwebp_.jpg", page: "products.html#mini-sealing-machine" },
         { id: "kitchen-mat", name: "Kitchen Mat", price: "Up to ₹1,000", url: "https://amzn.to/3HG0ry2", image: "https://m.media-amazon.com/images/I/619hMFvYSoL._UF894,1000_QL80_FMwebp_.jpg", page: "products.html#kitchen-mat" },
         { id: "knife-sharpener", name: "Knife Sharpener", price: "Under ₹500", url: "https://amzn.to/45TExRW", image: "https://m.media-amazon.com/images/I/610WnGc6kPL._UF894,1000_QL80_FMwebp_.jpg", page: "products.html#knife-sharpener" }
