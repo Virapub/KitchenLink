@@ -14,7 +14,7 @@
             <button class="hamburger" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
             <div class="links">
                 <a href="index.html" class="active">Home</a>
-                <a href="products.html">Products</a>
+                <a href="index.html#products">Products</a>
                 <div class="dropdown">
                     <button class="dropbtn">Meal Plans <i class="fas fa-caret-down"></i></button>
                     <div class="dropdown-content">
@@ -32,11 +32,13 @@
     </header>
 
     <div class="search">
-        <input type="text" id="searchInput" placeholder="Search gadgets..." aria-label="Search kitchen gadgets">
+        <input type="text" id="searchInput" placeholder="Search gadgets or meals..." aria-label="Search kitchen gadgets or meal plans">
     </div>
 
+    <div class="search-results" id="searchResults"></div>
+
     <main class="products" id="productList" role="region" aria-label="Product list">
-        <div class="product" data-name="Philips Air Fryer">
+        <div class="product" id="philips-air-fryer" data-name="Philips Air Fryer">
             <div class="image-container">
                 <img src="https://m.media-amazon.com/images/I/414ly0wsjYL._SL1000_.jpg" alt="Philips Air Fryer">
             </div>
@@ -46,7 +48,7 @@
                 <a href="https://amzn.to/4kgzH4R" class="buy" target="_blank" rel="noopener">Buy Now</a>
             </div>
         </div>
-        <!-- अन्य प्रोडक्ट्स (पिछले कोड से समान, संक्षिप्तता के लिए हटाए गए) -->
+        <!-- अन्य प्रोडक्ट्स यहाँ जोड़ें -->
     </main>
 
     <footer role="contentinfo">
@@ -94,13 +96,15 @@
         </div>
     </footer>
 
+    <script src="data.js"></script>
     <script>
         const hamburger = document.querySelector('.hamburger');
         const navLinks = document.querySelector('.links');
         const dropdown = document.querySelector('.dropdown');
         const dropdownContent = document.querySelector('.dropdown-content');
         const searchInput = document.getElementById('searchInput');
-        const products = document.querySelectorAll('.product');
+        const searchResults = document.getElementById('searchResults');
+        const productList = document.getElementById('productList');
 
         hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('active');
@@ -119,11 +123,57 @@
         });
 
         searchInput.addEventListener('input', () => {
-            const query = searchInput.value.toLowerCase();
-            products.forEach(product => {
-                const name = product.getAttribute('data-name').toLowerCase();
-                product.style.display = name.includes(query) ? 'block' : 'none';
-            });
+            const query = searchInput.value.toLowerCase().trim();
+            searchResults.innerHTML = '';
+            productList.style.display = query ? 'none' : 'grid';
+
+            if (query) {
+                // सर्च प्रोडक्ट्स
+                const productResults = data.products.filter(product => product.name.toLowerCase().includes(query));
+                // सर्च मील प्लान्स
+                const officeMealResults = data.mealPlans.office.filter(meal => meal.name.toLowerCase().includes(query));
+                const budgetMealResults = data.mealPlans.budget.filter(meal => meal.name.toLowerCase().includes(query));
+
+                // रिजल्ट्स डिस्प्ले
+                if (productResults.length || officeMealResults.length || budgetMealResults.length) {
+                    searchResults.innerHTML = '<h3>Search Results</h3>';
+                    productResults.forEach(product => {
+                        const div = document.createElement('div');
+                        div.className = 'search-result';
+                        div.innerHTML = `
+                            <a href="${product.page}">
+                                <div class="result-title">${product.name}</div>
+                                <div class="result-type">Product - ${product.price}</div>
+                            </a>
+                        `;
+                        searchResults.appendChild(div);
+                    });
+                    officeMealResults.forEach(meal => {
+                        const div = document.createElement('div');
+                        div.className = 'search-result';
+                        div.innerHTML = `
+                            <a href="${meal.page}">
+                                <div class="result-title">${meal.day}</div>
+                                <div class="result-type">Office Meal Plan - ${meal.name}</div>
+                            </a>
+                        `;
+                        searchResults.appendChild(div);
+                    });
+                    budgetMealResults.forEach(meal => {
+                        const div = document.createElement('div');
+                        div.className = 'search-result';
+                        div.innerHTML = `
+                            <a href="${meal.page}">
+                                <div class="result-title">${meal.day}</div>
+                                <div class="result-type">Budget Meal Plan - ${meal.name}</div>
+                            </a>
+                        `;
+                        searchResults.appendChild(div);
+                    });
+                } else {
+                    searchResults.innerHTML = '<p>No results found.</p>';
+                }
+            }
         });
     </script>
 </body>
