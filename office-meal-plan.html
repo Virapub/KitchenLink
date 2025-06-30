@@ -11,7 +11,7 @@
     <nav role="navigation">
         <div class="nav-container">
             <div class="logo" aria-label="KitchenLink Logo">KitchenLink</div>
-            <button class="hamburger" aria-label="Toggle menu">☰</button>
+            <button class="hamburger" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
             <div class="links">
                 <a href="index.html">Home</a>
                 <a href="index.html#products">Products</a>
@@ -66,138 +66,128 @@
 
         <div class="card">
             <h2><i class="fas fa-calendar-alt"></i> 5-Day Meal Plan</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Day</th>
-                        <th>Breakfast</th>
-                        <th>Lunch</th>
-                        <th>Dinner</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Monday</strong></td>
-                        <td class="meal-cell">
-                            <i class="fas fa-coffee"></i>
-                            <div class="meal-content">
-                                <div class="meal-title">Banana Smoothie + Oats</div>
-                                <div class="meal-desc">Protein-rich, energy boosting</div>
-                            </div>
-                        </td>
-                        <td class="meal-cell">
-                            <i class="fas fa-apple-alt"></i>
-                            <div class="meal-content">
-                                <div class="meal-title">Quinoa + Stir-fry Veggies</div>
-                                <div class="meal-desc">Low-carb, high protein</div>
-                            </div>
-                        </td>
-                        <td class="meal-cell">
-                            <i class="fas fa-moon"></i>
-                            <div class="meal-content">
-                                <div class="meal-title">Chapati + Palak Paneer</div>
-                                <div class="meal-desc">Rich in iron and calcium</div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><strong>Tuesday</strong></td>
-                        <td class="meal-cell">
-                            <i class="fas fa-coffee"></i>
-                            <div class="meal-content">
-                                <div class="meal-title">Boiled Eggs + Toast</div>
-                                <div class="meal-desc">High protein, low effort</div>
-                            </div>
-                        </td>
-                        <td class="meal-cell">
-                            <i class="fas fa-apple-alt"></i>
-                            <div class="meal-content">
-                                <div class="meal-title">Rice + Sambar + Curd</div>
-                                <div class="meal-desc">South Indian comfort food</div>
-                            </div>
-                        </td>
-                        <td class="meal-cell">
-                            <i class="fas fa-moon"></i>
-                            <div class="meal-content">
-                                <div class="meal-title">Roti + Veg Kurma</div>
-                                <div class="meal-desc">Mixed vegetable goodness</div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><strong>Wednesday</strong></td>
-                        <td class="meal-cell">
-                            <i class="fas fa-coffee"></i>
-                            <div class="meal-content">
-                                <div class="meal-title">Upma + Chai</div>
-                                <div class="meal-desc">Light and comforting</div>
-                            </div>
-                        </td>
-                        <td class="meal-cell">
-                            <i class="fas fa-apple-alt"></i>
-                            <div class="meal-content">
-                                <div class="meal-title">Chickpea Salad + Buttermilk</div>
-                                <div class="meal-desc">High protein, refreshing</div>
-                            </div>
-                        </td>
-                        <td class="meal-cell">
-                            <i class="fas fa-moon"></i>
-                            <div class="meal-content">
-                                <div class="meal-title">Lemon Rice + Pickle</div>
-                                <div class="meal-desc">Tangy and flavorful</div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><strong>Thursday</strong></td>
-                        <td class="meal-cell">
-                            <i class="fas fa-coffee"></i>
-                            <div class="meal-content">
-                                <div class="meal-title">Bread + Avocado Spread</div>
-                                <div class="meal-desc">Healthy fats and fiber</div>
-                            </div>
-                        </td>
-                        <td class="meal-cell">
-                            <i class="fas fa-apple-alt"></i>
-                            <div class="meal-content">
-                                <div class="meal-title">Veg Burrito Bowl + Curd</div>
-                                <div class="meal-desc">Mexican-Indian fusion</div>
-                            </div>
-                        </td>
-                        <td class="meal-cell">
-                            <i class="fas fa-moon"></i>
-                            <div class="meal-content">
-                                <div class="meal-title">Dal Khichdi + Ghee</div>
-                                <div class="meal-desc">Comforting and light</div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><strong>Friday</strong></td>
-                        <td class="meal-cell">
-                            <i class="fas fa-coffee"></i>
-                            <div class="meal-content">
-                                <div class="meal-title">Poha + Sprouts</div>
-                                <div class="meal-desc">Light Maharashtrian classic</div>
-                            </div>
-                        </td>
-                        <td class="meal-cell">
-                            <i class="fas fa-apple-alt"></i>
-                            <div class="meal-content">
-                                <div class="meal-title">Jeera Rice + Rajma</div>
-                                <div class="meal-desc">North Indian favorite</div>
-                            </div>
-                        </td>
-                        <td class="meal-cell">
-                            <i class="fas fa-moon"></i>
-                            <div class="meal-content">
-                                <div class="meal-title">Chapati + Bhindi Fry</div>
-                                <div class="meal-desc">Crispy and delicious</div>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="meal-plan">
+                <div class="meal-day">
+                    <h3>Monday</h3>
+                    <div class="meal-item">
+                        <i class="fas fa-coffee"></i>
+                        <div class="meal-content">
+                            <div class="meal-title">Banana Smoothie + Oats</div>
+                            <div class="meal-desc">Protein-rich, energy boosting</div>
+                        </div>
+                    </div>
+                    <div class="meal-item">
+                        <i class="fas fa-apple-alt"></i>
+                        <div class="meal-content">
+                            <div class="meal-title">Quinoa + Stir-fry Veggies</div>
+                            <div class="meal-desc">Low-carb, high protein</div>
+                        </div>
+                    </div>
+                    <div class="meal-item">
+                        <i class="fas fa-moon"></i>
+                        <div class="meal-content">
+                            <div class="meal-title">Chapati + Palak Paneer</div>
+                            <div class="meal-desc">Rich in iron and calcium</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal-day">
+                    <h3>Tuesday</h3>
+                    <div class="meal-item">
+                        <i class="fas fa-coffee"></i>
+                        <div class="meal-content">
+                            <div class="meal-title">Boiled Eggs + Toast</div>
+                            <div class="meal-desc">High protein, low effort</div>
+                        </div>
+                    </div>
+                    <div class="meal-item">
+                        <i class="fas fa-apple-alt"></i>
+                        <div class="meal-content">
+                            <div class="meal-title">Rice + Sambar + Curd</div>
+                            <div class="meal-desc">South Indian comfort food</div>
+                        </div>
+                    </div>
+                    <div class="meal-item">
+                        <i class="fas fa-moon"></i>
+                        <div class="meal-content">
+                            <div class="meal-title">Roti + Veg Kurma</div>
+                            <div class="meal-desc">Mixed vegetable goodness</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal-day">
+                    <h3>Wednesday</h3>
+                    <div class="meal-item">
+                        <i class="fas fa-coffee"></i>
+                        <div class="meal-content">
+                            <div class="meal-title">Upma + Chai</div>
+                            <div class="meal-desc">Light and comforting</div>
+                        </div>
+                    </div>
+                    <div class="meal-item">
+                        <i class="fas fa-apple-alt"></i>
+                        <div class="meal-content">
+                            <div class="meal-title">Chickpea Salad + Buttermilk</div>
+                            <div class="meal-desc">High protein, refreshing</div>
+                        </div>
+                    </div>
+                    <div class="meal-item">
+                        <i class="fas fa-moon"></i>
+                        <div class="meal-content">
+                            <div class="meal-title">Lemon Rice + Pickle</div>
+                            <div class="meal-desc">Tangy and flavorful</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal-day">
+                    <h3>Thursday</h3>
+                    <div class="meal-item">
+                        <i class="fas fa-coffee"></i>
+                        <div class="meal-content">
+                            <div class="meal-title">Bread + Avocado Spread</div>
+                            <div class="meal-desc">Healthy fats and fiber</div>
+                        </div>
+                    </div>
+                    <div class="meal-item">
+                        <i class="fas fa-apple-alt"></i>
+                        <div class="meal-content">
+                            <div class="meal-title">Veg Burrito Bowl + Curd</div>
+                            <div class="meal-desc">Mexican-Indian fusion</div>
+                        </div>
+                    </div>
+                    <div class="meal-item">
+                        <i class="fas fa-moon"></i>
+                        <div class="meal-content">
+                            <div class="meal-title">Dal Khichdi + Ghee</div>
+                            <div class="meal-desc">Comforting and light</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal-day">
+                    <h3>Friday</h3>
+                    <div class="meal-item">
+                        <i class="fas fa-coffee"></i>
+                        <div class="meal-content">
+                            <div class="meal-title">Poha + Sprouts</div>
+                            <div class="meal-desc">Light Maharashtrian classic</div>
+                        </div>
+                    </div>
+                    <div class="meal-item">
+                        <i class="fas fa-apple-alt"></i>
+                        <div class="meal-content">
+                            <div class="meal-title">Jeera Rice + Rajma</div>
+                            <div class="meal-desc">North Indian favorite</div>
+                        </div>
+                    </div>
+                    <div class="meal-item">
+                        <i class="fas fa-moon"></i>
+                        <div class="meal-content">
+                            <div class="meal-title">Chapati + Bhindi Fry</div>
+                            <div class="meal-desc">Crispy and delicious</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="tip-box">
                 <i class="fas fa-lightbulb"></i>
                 <div>
@@ -280,7 +270,7 @@
                 <h3>Meal Plans</h3>
                 <ul class="footer-links">
                     <li><a href="office-meal-plan.html"><i class="fas fa-chevron-right"></i> Office Meal Plans</a></li>
-                    <li><a href="#"><i class="fas fa-chevron-right"></i> Weight Loss Plans</a></li>
+                    <li><a href="meal-prep.html"><i class="fas fa-chevron-right"></i> Budget Plans</a></li>
                     <li><a href="#"><i class="fas fa-chevron-right"></i> Vegetarian Plans</a></li>
                     <li><a href="#"><i class="fas fa-chevron-right"></i> High-Protein Plans</a></li>
                 </ul>
@@ -297,8 +287,10 @@
             <div class="footer-column">
                 <h3>Contact Us</h3>
                 <ul class="footer-links">
-                    <li><a href="#"><i class="fas fa-envelope"></i> virapublishers@gmail.com</a></li>
-                    
+                    <li><a href="#"><i class="fas fa-envelope"></i> hello@kitchenlink.com</a></li>
+                    <li><a href="#"><i class="fas fa-phone"></i> +91 98765 43210</a></li>
+                    <li><a href="#"><i class="fas fa-map-marker-alt"></i> Mumbai, India</a></li>
+                    <li><a href="#"><i class="fas fa-clock"></i> Mon-Fri: 9AM-6PM</a></li>
                 </ul>
             </div>
         </div>
@@ -313,19 +305,16 @@
         const dropdown = document.querySelector('.dropdown');
         const dropdownContent = document.querySelector('.dropdown-content');
 
-        // Hamburger menu toggle
         hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('active');
-            hamburger.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+            hamburger.innerHTML = navLinks.classList.contains('active') ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
         });
 
-        // Dropdown toggle on click
         dropdown.querySelector('.dropbtn').addEventListener('click', (e) => {
             e.preventDefault();
             dropdownContent.classList.toggle('show');
         });
 
-        // Close dropdown when clicking outside
         document.addEventListener('click', (e) => {
             if (!dropdown.contains(e.target)) {
                 dropdownContent.classList.remove('show');
@@ -333,4 +322,4 @@
         });
     </script>
 </body>
-</html>
+                        </html>
