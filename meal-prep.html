@@ -14,7 +14,7 @@
             <button class="hamburger" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
             <div class="links">
                 <a href="index.html">Home</a>
-                <a href="products.html">Products</a>
+                <a href="index.html#products">Products</a>
                 <div class="dropdown">
                     <button class="dropbtn">Meal Plans <i class="fas fa-caret-down"></i></button>
                     <div class="dropdown-content">
@@ -33,6 +33,10 @@
         <p>Plan smart. Save time. Eat better!</p>
     </header>
 
+    <div class="search">
+        <input type="text" id="searchInput" placeholder="Search meals..." aria-label="Search meal plans">
+    </div>
+
     <div class="container">
         <div class="card">
             <h2><i class="fas fa-lightbulb"></i> Why Meal Prep?</h2>
@@ -44,8 +48,8 @@
 
         <div class="card">
             <h2><i class="fas fa-calendar-alt"></i> 5-Day Budget Meal Plan</h2>
-            <div class="meal-plan">
-                <div class="meal-day">
+            <div class="meal-plan" id="mealPlan">
+                <div class="meal-day" id="budget-monday" data-name="Poha + Tea, Rice + Dal + Veg, Chapati + Mixed Sabzi">
                     <h3>Monday</h3>
                     <div class="meal-item">
                         <i class="fas fa-coffee"></i>
@@ -69,7 +73,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="meal-day">
+                <div class="meal-day" id="budget-tuesday" data-name="Idli + Chutney, Veg Pulao + Raita, Chapati + Paneer Bhurji">
                     <h3>Tuesday</h3>
                     <div class="meal-item">
                         <i class="fas fa-coffee"></i>
@@ -93,7 +97,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="meal-day">
+                <div class="meal-day" id="budget-wednesday" data-name="Upma + Filter Coffee, Khichdi + Pickle, Rice + Rajma">
                     <h3>Wednesday</h3>
                     <div class="meal-item">
                         <i class="fas fa-coffee"></i>
@@ -117,7 +121,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="meal-day">
+                <div class="meal-day" id="budget-thursday" data-name="Bread + Peanut Butter, Veg Sandwich + Juice, Chapati + Aloo Curry">
                     <h3>Thursday</h3>
                     <div class="meal-item">
                         <i class="fas fa-coffee"></i>
@@ -141,7 +145,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="meal-day">
+                <div class="meal-day" id="budget-friday" data-name="Oats + Banana, Lemon Rice + Curd, Roti + Chana Masala">
                     <h3>Friday</h3>
                     <div class="meal-item">
                         <i class="fas fa-coffee"></i>
@@ -219,6 +223,8 @@
         const navLinks = document.querySelector('.links');
         const dropdown = document.querySelector('.dropdown');
         const dropdownContent = document.querySelector('.dropdown-content');
+        const searchInput = document.getElementById('searchInput');
+        const mealDays = document.querySelectorAll('.meal-day');
 
         hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('active');
@@ -234,6 +240,14 @@
             if (!dropdown.contains(e.target)) {
                 dropdownContent.classList.remove('show');
             }
+        });
+
+        searchInput.addEventListener('input', () => {
+            const query = searchInput.value.toLowerCase();
+            mealDays.forEach(day => {
+                const name = day.getAttribute('data-name').toLowerCase();
+                day.style.display = name.includes(query) ? 'block' : 'none';
+            });
         });
     </script>
 </body>
