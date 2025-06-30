@@ -1,20 +1,33 @@
 /* रीसेट डिफॉल्ट स्टाइल्स */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+/* CSS वेरिएबल्स */
+:root {
+    --primary: #ff7a5c;
+    --primary-dark: #e56a4d;
+    --secondary: #4a9b8c;
+    --light: #fff8f5;
+    --dark: #333333;
+    --accent: #ffd166;
+    --gray: #f5f5f5;
+    --border: #eaeaea;
 }
 
 /* बेसिक बॉडी स्टाइलिंग */
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background: #f9fafb;
-    color: #1f2a44;
+    font-family: 'Inter', 'Segoe UI', 'Poppins', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    background: linear-gradient(135deg, #fffdf9 0%, #fff8f2 100%);
+    color: var(--dark);
     line-height: 1.7;
+    min-height: 100vh;
 }
 
 /* कंटेनर */
-.container {
+.container, .nav-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1.5rem;
@@ -30,56 +43,57 @@ nav {
     z-index: 100;
 }
 
-nav .nav-container {
+.nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-nav .logo {
+.logo {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #ff6f61;
+    color: var(--primary);
 }
 
-nav .links {
+.links {
     display: flex;
     gap: 1.5rem;
+    align-items: center;
 }
 
-nav .links a {
+.links a {
     text-decoration: none;
-    color: #1f2a44;
+    color: var(--dark);
     font-size: 1rem;
     transition: color 0.3s ease;
 }
 
-nav .links a:hover,
-nav .links a.active {
-    color: #ff6f61;
+.links a:hover, .links a.active {
+    color: var(--primary);
     font-weight: 600;
 }
 
 /* ड्रॉप-डाउन मेनू */
 .dropdown {
     position: relative;
-    display: inline-block;
 }
 
-.dropdown .dropbtn {
+.dropbtn {
     background: none;
     border: none;
-    color: #1f2a44;
+    color: var(--dark);
     font-size: 1rem;
     font-family: inherit;
     cursor: pointer;
     padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
     transition: color 0.3s ease;
 }
 
-.dropdown .dropbtn:hover {
-    color: #ff6f61;
-    font-weight: 600;
+.dropbtn:hover {
+    color: var(--primary);
 }
 
 .dropdown-content {
@@ -94,8 +108,12 @@ nav .links a.active {
     left: 0;
 }
 
+.dropdown-content.show {
+    display: block;
+}
+
 .dropdown-content a {
-    color: #1f2a44;
+    color: var(--dark);
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -104,12 +122,8 @@ nav .links a.active {
 }
 
 .dropdown-content a:hover {
-    background-color: #f1f1f1;
-    color: #ff6f61;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
+    background-color: var(--light);
+    color: var(--primary);
 }
 
 /* हैमबर्गर मेनू */
@@ -118,31 +132,76 @@ nav .links a.active {
     font-size: 1.5rem;
     background: none;
     border: none;
-    color: #ff6f61;
+    color: var(--primary);
     cursor: pointer;
 }
 
-/* हेडर */
-header {
+/* हेडर (index.html के लिए) */
+header[role="banner"] {
     background: linear-gradient(135deg, #2c3e50 0%, #1a2634 100%);
     color: white;
     text-align: center;
     padding: 3rem 1.5rem;
 }
 
-h1 {
-    font-size: 2rem;
+/* हेडर (office-meal-plan.html के लिए) */
+header {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, #ff9a9e, #fad0c4, #fad0c4, #ff9a9e);
+}
+
+header h1 {
+    font-size: 2.5rem;
     font-weight: 700;
-    margin-bottom: 0.5rem;
+    margin-bottom: 12px;
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.15);
 }
 
 header p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     max-width: 700px;
     margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    opacity: 0.95;
 }
 
-/* सर्च बार */
+.decoration {
+    position: absolute;
+    opacity: 0.1;
+    font-size: 10rem;
+}
+
+.decoration.fork {
+    top: 20px;
+    left: 10%;
+    transform: rotate(-30deg);
+}
+
+.decoration.knife {
+    bottom: 20px;
+    right: 10%;
+    transform: rotate(25deg);
+}
+
+/* सर्च बार (index.html) */
 .search {
     text-align: center;
     margin: 2rem 1.5rem;
@@ -152,7 +211,7 @@ header p {
     width: 100%;
     max-width: 500px;
     padding: 0.75rem;
-    border: 1px solid #e5e7eb;
+    border: 1px solid var(--border);
     border-radius: 8px;
     font-size: 1rem;
     transition: border-color 0.3s ease;
@@ -160,11 +219,11 @@ header p {
 
 .search input[type="text"]:focus {
     outline: none;
-    border-color: #ff6f61;
+    border-color: var(--primary);
     box-shadow: 0 0 0 3px rgba(255, 111, 97, 0.2);
 }
 
-/* प्रोडक्ट्स ग्रिड */
+/* प्रोडक्ट्स ग्रिड (index.html) */
 .products {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -172,32 +231,31 @@ header p {
     padding: 1.5rem;
 }
 
-/* प्रोडक्ट कार्ड */
+/* प्रोडक्ट कार्ड (index.html) */
 .product {
     background: #ffffff;
-    border: 1px solid #e5e7eb;
+    border: 1px solid var(--border);
     border-radius: 12px;
     padding: 1.5rem;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     display: flex;
     flex-direction: column;
 }
 
 .product:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
 }
 
-/* इमेज कंटेनर */
 .image-container {
     position: relative;
     width: 100%;
     padding-top: 100%;
     overflow: hidden;
     border-radius: 8px;
-    background: #f8f9fa;
+    background: var(--gray);
     margin-bottom: 1rem;
 }
 
@@ -216,7 +274,6 @@ header p {
     transform: scale(1.05);
 }
 
-/* प्रोडक्ट कंटेंट */
 .product-content {
     display: flex;
     flex-direction: column;
@@ -230,7 +287,7 @@ header p {
 }
 
 .price {
-    color: #16a085;
+    color: var(--secondary);
     font-size: 1.1rem;
     margin-bottom: 1rem;
 }
@@ -238,7 +295,7 @@ header p {
 .buy {
     display: inline-block;
     padding: 0.75rem 1.5rem;
-    background: #e67e22;
+    background: var(--primary-dark);
     color: white;
     border-radius: 8px;
     text-decoration: none;
@@ -251,72 +308,38 @@ header p {
     background: #d35400;
 }
 
-/* फूटर */
-footer {
-    text-align: center;
-    padding: 1.5rem;
-    background: #e5e7eb;
-    font-size: 0.9rem;
-    color: #4b5563;
-    margin-top: 2rem;
+/* कार्ड (office-meal-plan.html) */
+.card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+    padding: 30px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* रिस्पॉन्सिव डिज़ाइन */
-@media (max-width: 768px) {
-    nav .links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        padding: 1rem 0;
-    }
-
-    nav .links.active {
-        display: flex;
-    }
-
-    nav .hamburger {
-        display: block;
-    }
-
-    h1 {
-        font-size: 1.5rem;
-    }
-
-    .products {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
-
-    .dropdown-content {
-        position: static;
-        width: 100%;
-    }
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.1);
 }
 
-@media (max-width: 480px) {
-    h1 {
-        font-size: 1.25rem;
-    }
-
-    .search input[type="text"] {
-        font-size: 0.9rem;
-    }
-
-    .product {
-        padding: 1rem;
-    }
-
-    .title {
-        font-size: 1rem;
-    }
-
-    .price {
-        font-size: 0.95rem;
-    }
-
-    .buy {
-        padding: 0.6rem 1.2rem;
-        font-size: 0.9rem;
-    }
+h2 {
+    color: var(--primary);
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
-  
+h2 i {
+    background: var(--light);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary tìm
+
+System: * Today's date and time is 06:52 AM IST on Monday, June 30, 2025.
