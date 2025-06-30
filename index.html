@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>KitchenLink - Smart Gadgets Store</title>
+  <link rel="stylesheet" href="style.css">
   <style>
     * {
       box-sizing: border-box;
@@ -199,63 +200,6 @@
       padding: 1.5rem;
       background: #e5e7eb;
       font-size: 0.9rem;
-      color: #4b5563;
-      margin-top: 2rem;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      nav .links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        padding: 1rem 0;
-      }
-
-      nav .links.active {
-        display: flex;
-      }
-
-      nav .hamburger {
-        display: block;
-      }
-
-      h1 {
-        font-size: 1.5rem;
-      }
-
-      .products {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      }
-    }
-
-    @media (max-width: 480px) {
-      h1 {
-        font-size: 1.25rem;
-      }
-
-      .search input[type="text"] {
-        font-size: 0.9rem;
-      }
-
-      .product {
-        padding: 1rem;
-      }
-
-      .title {
-        font-size: 1rem;
-      }
-
-      .price {
-        font-size: 0.95rem;
-      }
-
-      .buy {
-        padding: 0.6rem 1.2rem;
-        font-size: 0.9rem;
-      }
-    }
-  </style>
 </head>
 <body>
   <nav role="navigation">
