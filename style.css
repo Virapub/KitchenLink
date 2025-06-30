@@ -1,0 +1,322 @@
+/* रीसेट डिफॉल्ट स्टाइल्स */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* बेसिक बॉडी स्टाइलिंग */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #f9fafb;
+    color: #1f2a44;
+    line-height: 1.7;
+}
+
+/* कंटेनर */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* नेविगेशन बार */
+nav {
+    background: #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ff6f61;
+}
+
+nav .links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav .links a {
+    text-decoration: none;
+    color: #1f2a44;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav .links a:hover,
+nav .links a.active {
+    color: #ff6f61;
+    font-weight: 600;
+}
+
+/* ड्रॉप-डाउन मेनू */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown .dropbtn {
+    background: none;
+    border: none;
+    color: #1f2a44;
+    font-size: 1rem;
+    font-family: inherit;
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.3s ease;
+}
+
+.dropdown .dropbtn:hover {
+    color: #ff6f61;
+    font-weight: 600;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #ffffff;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 8px;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown-content a {
+    color: #1f2a44;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: #ff6f61;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* हैमबर्गर मेनू */
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: #ff6f61;
+    cursor: pointer;
+}
+
+/* हेडर */
+header {
+    background: linear-gradient(135deg, #2c3e50 0%, #1a2634 100%);
+    color: white;
+    text-align: center;
+    padding: 3rem 1.5rem;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* सर्च बार */
+.search {
+    text-align: center;
+    margin: 2rem 1.5rem;
+}
+
+.search input[type="text"] {
+    width: 100%;
+    max-width: 500px;
+    padding: 0.75rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.search input[type="text"]:focus {
+    outline: none;
+    border-color: #ff6f61;
+    box-shadow: 0 0 0 3px rgba(255, 111, 97, 0.2);
+}
+
+/* प्रोडक्ट्स ग्रिड */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+/* प्रोडक्ट कार्ड */
+.product {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* इमेज कंटेनर */
+.image-container {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #f8f9fa;
+    margin-bottom: 1rem;
+}
+
+.image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+.product:hover .image-container img {
+    transform: scale(1.05);
+}
+
+/* प्रोडक्ट कंटेंट */
+.product-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.price {
+    color: #16a085;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.buy {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: #e67e22;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    margin-top: auto;
+}
+
+.buy:hover {
+    background: #d35400;
+}
+
+/* फूटर */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: #e5e7eb;
+    font-size: 0.9rem;
+    color: #4b5563;
+    margin-top: 2rem;
+}
+
+/* रिस्पॉन्सिव डिज़ाइन */
+@media (max-width: 768px) {
+    nav .links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding: 1rem 0;
+    }
+
+    nav .links.active {
+        display: flex;
+    }
+
+    nav .hamburger {
+        display: block;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .products {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .dropdown-content {
+        position: static;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.25rem;
+    }
+
+    .search input[type="text"] {
+        font-size: 0.9rem;
+    }
+
+    .product {
+        padding: 1rem;
+    }
+
+    .title {
+        font-size: 1rem;
+    }
+
+    .price {
+        font-size: 0.95rem;
+    }
+
+    .buy {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+}
+
+  
