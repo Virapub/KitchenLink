@@ -87,7 +87,7 @@ const data = {
       url: "https://amzn.to/4etDQBd",
       image: "https://m.media-amazon.com/images/I/51vG9anK5GL.jpg",
       page: "products.html#tap-filter"
-    }
+    },
     {
       id: "philips-air-fryer",
       name: "Philips Air Fryer",
@@ -159,9 +159,9 @@ const data = {
       url: "https://amzn.to/4ex7lCf",
       image: "https://m.media-amazon.com/images/I/81haDHz+llL._SL1500_.jpg",
       page: "products.html#atomberg-mixer"
-    }
-  ],
-    } 
+    },
+  ]
+}
 
    
 
