@@ -1,6 +1,94 @@
 const data = {
   products: [
     {
+      id: "inkbird-thermometer",
+      name: "INKBIRD Bluetooth Meat Thermometer",
+      price: "₹2,090 / $25.18",
+      url: "https://amzn.to/3TjlTvu",
+      image: "https://m.media-amazon.com/images/I/71UtnkqnYCL._SL1500_.jpg",
+      page: "products.html#inkbird-thermometer"
+    },
+    {
+      id: "bbqgo-gloves",
+      name: "BBQGO BBQ Grill Gloves",
+      price: "₹1,292 / $15.57",
+      url: "https://amzn.to/3ZTGlXp",
+      image: "https://m.media-amazon.com/images/I/61vMY+WRAZL._SL1500_.jpg",
+      page: "products.html#bbqgo-gloves"
+    },
+    {
+      id: "breakfast-maker",
+      name: "Electric Breakfast Sandwich Maker",
+      price: "₹5,699 / $68.66",
+      url: "https://amzn.to/3TRB1Ae",
+      image: "https://m.media-amazon.com/images/I/61LUXbVnxjL._SL1500_.jpg",
+      page: "products.html#breakfast-maker"
+    },
+    {
+      id: "mini-chopper",
+      name: "Mini Food Chopper",
+      price: "₹3,700 / $44.58",
+      url: "https://amzn.to/3ZXneM8",
+      image: "https://m.media-amazon.com/images/I/61UmnOTKVFL._SL1080_.jpg",
+      page: "products.html#mini-chopper"
+    },
+    {
+      id: "smart-scale",
+      name: "Smart Measuring Spoon/Scale",
+      price: "₹1,199 / $14.45",
+      url: "https://amzn.to/4l6Z1eD",
+      image: "https://m.media-amazon.com/images/I/71yo8PyCRwL._SL1500_.jpg",
+      page: "products.html#smart-scale"
+    },
+    {
+      id: "auto-stirrer",
+      name: "Automatic Stirring Pot Tool",
+      price: "₹13,475.98 / $162.36",
+      url: "https://amzn.to/4kljH1o",
+      image: "https://m.media-amazon.com/images/I/61YUQzBHRpL._SL1500_.jpg",
+      page: "products.html#auto-stirrer"
+    },
+    {
+      id: "spice-rack",
+      name: "Magnetic Spice Rack Organizer",
+      price: "₹2,299 / $27.70",
+      url: "https://amzn.to/40xGaBh",
+      image: "https://m.media-amazon.com/images/I/71ILXxzPrnL._SL1500_.jpg",
+      page: "products.html#spice-rack"
+    },
+    {
+      id: "veg-slicer",
+      name: "Multi-Function Vegetable Slicer",
+      price: "₹3,499 / $42.16",
+      url: "https://amzn.to/40y9ebL",
+      image: "https://m.media-amazon.com/images/I/714KMq8ALwL._SL1500_.jpg",
+      page: "products.html#veg-slicer"
+    },
+    {
+      id: "cabinet-light",
+      name: "Under Cabinet Lighting (Rechargeable)",
+      price: "₹699 / $8.42",
+      url: "https://amzn.to/3I92T05",
+      image: "https://m.media-amazon.com/images/I/71XvKLC3GgL._SL1500_.jpg",
+      page: "products.html#cabinet-light"
+    },
+    {
+      id: "silicone-bags",
+      name: "Reusable Silicone Zip Bags",
+      price: "₹700 / $8.43",
+      url: "https://amzn.to/4keOzR1",
+      image: "https://m.media-amazon.com/images/I/81ioPY352VL._SL1500_.jpg",
+      page: "products.html#silicone-bags"
+    },
+    {
+      id: "tap-filter",
+      name: "Smart Tap Water Filter Dispenser",
+      price: "₹299 / $3.60",
+      url: "https://amzn.to/4etDQBd",
+      image: "https://m.media-amazon.com/images/I/51vG9anK5GL.jpg",
+      page: "products.html#tap-filter"
+    }
+    {
       id: "philips-air-fryer",
       name: "Philips Air Fryer",
       price: "Up to ₹10,000 / $119",
