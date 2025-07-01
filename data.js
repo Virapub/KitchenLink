@@ -5,7 +5,11 @@ const data = {
         { id: "vaccum-sealer", name: "Vaccum Sealer", price: "Up to ₹3,000", url: "https://amzn.to/3SVcs54", image: "https://m.media-amazon.com/images/I/71QkgEBOZiL._UF894,1000_QL80_FMwebp_.jpg", page: "products.html#vaccum-sealer" },
         { id: "mini-sealing-machine", name: "Mini Sealing Machine", price: "Under ₹500", url: "https://amzn.to/4k1PTqE", image: "https://m.media-amazon.com/images/I/71utCY3f-JL._UF894,1000_QL80_FMwebp_.jpg", page: "products.html#mini-sealing-machine" },
         { id: "kitchen-mat", name: "Kitchen Mat", price: "Up to ₹1,000", url: "https://amzn.to/3HG0ry2", image: "https://m.media-amazon.com/images/I/619hMFvYSoL._UF894,1000_QL80_FMwebp_.jpg", page: "products.html#kitchen-mat" },
-        { id: "knife-sharpener", name: "Knife Sharpener", price: "Under ₹500", url: "https://amzn.to/45TExRW", image: "https://m.media-amazon.com/images/I/610WnGc6kPL._UF894,1000_QL80_FMwebp_.jpg", page: "products.html#knife-sharpener" }
+        { id: "knife-sharpener", name: "Knife Sharpener", price: "Under ₹500", url: "https://amzn.to/45TExRW", image: "https://m.media-amazon.com/images/I/610WnGc6kPL._UF894,1000_QL80_FMwebp_.jpg", page: "products.html#knife-sharpener" },
+        {id: "breakfast-station",name: "3-in-1 Breakfast Maker", priceINR: "Up to ₹8,000",priceUSD: "$95.99",image: "https://m.media-amazon.com/images/I/619zlfuWKgL._SL1001_.jpg",link: "https://amzn.to/45K1VkQ", page: "products.html#        "},
+        {id: "multi-cooker",name: "Prestige Multi-Cooker 1.5L" priceINR: "Under ₹2,500", priceUSD: "$29.99",image: "https://m.media-amazon.com/images/I/71OHF3Zl0bL._SL1500_.jpg",link: "https://amzn.to/4kll3ZT",page: "products.html#Prestige Multi-Cooker 1.5L"},
+        {id: "atomberg-mixer",name: "Atomberg Zenova Mixer Grinder",priceINR: "Up to ₹7,000",priceUSD: "$84.99",image: "https://m.media-amazon.com/images/I/81haDHz+llL._SL1500_.jpg",link: "https://amzn.to/4ex7lCf", page: "products.html#Atomberg Zenova Mixer Grinder"}
+
     ],
     mealPlans: {
         office: [
