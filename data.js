@@ -159,9 +159,9 @@ const data = {
       url: "https://amzn.to/4ex7lCf",
       image: "https://m.media-amazon.com/images/I/81haDHz+llL._SL1500_.jpg",
       page: "products.html#atomberg-mixer"
-    },
-  ]
-}
+    }
+  ],
+
 
    
 
