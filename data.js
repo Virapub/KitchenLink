@@ -73,8 +73,47 @@ const data = {
       page: "products.html#atomberg-mixer"
     }
   ],
+
   mealPlans: {
+    office: [
+      {
+        id: "office-monday",
+        name: "Banana Smoothie + Oats, Quinoa + Stir-fry Veggies, Chapati + Palak Paneer",
+        day: "Monday",
+        page: "office-meal-plan.html#office-monday"
+      },
+      {
+        id: "office-tuesday",
+        name: "Boiled Eggs + Toast, Rice + Sambar + Curd, Roti + Veg Kurma",
+        day: "Tuesday",
+        page: "office-meal-plan.html#office-tuesday"
+      },
+      {
+        id: "office-wednesday",
+        name: "Upma + Chai, Chickpea Salad + Buttermilk, Lemon Rice + Pickle",
+        day: "Wednesday",
+        page: "office-meal-plan.html#office-wednesday"
+      },
+      {
+        id: "office-thursday",
+        name: "Bread + Avocado Spread, Veg Burrito Bowl + Curd, Dal Khichdi + Ghee",
+        day: "Thursday",
+        page: "office-meal-plan.html#office-thursday"
+      },
+      {
+        id: "office-friday",
+        name: "Poha + Sprouts, Jeera Rice + Rajma, Chapati + Bhindi Fry",
+        day: "Friday",
+        page: "office-meal-plan.html#office-friday"
+      }
+    ],
     budget: [
+      {
+        id: "budget-monday",
+        name: "Poha + Tea, Rice + Dal + Veg, Chapati + Mixed Sabzi",
+        day: "Monday",
+        page: "meal-prep.html#budget-monday"
+      },
       {
         id: "budget-tuesday",
         name: "Idli + Chutney, Veg Pulao + Raita, Chapati + Paneer Bhurji",
