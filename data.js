@@ -1,6 +1,153 @@
 const data = {
   products: [
     {
+    id: "product-collapsible-kettle",
+    name: "Collapsible Electric Kettle",
+    priceINR: 1499,
+    priceUSD: 18,
+    link: "https://amzn.to/448SSZx"
+  },
+  {
+    id: "product-soap-dispenser",
+    name: "Automatic Soap Dispenser",
+    priceINR: 1388,
+    priceUSD: 17,
+    link: "https://amzn.to/46sLIRc"
+  },
+  {
+    id: "product-fridge-shelf",
+    name: "Magnetic Fridge Shelf Rack",
+    priceINR: 1199,
+    priceUSD: 14,
+    link: "https://amzn.to/44rEZEO"
+  },
+  {
+    id: "product-fridge-bins",
+    name: "Fridge Organizer Bins (Clear, Stackable)",
+    priceINR: 2395,
+    priceUSD: 29,
+    link: "https://amzn.to/3I98vaY"
+  },
+  {
+    id: "product-smart-trashcan",
+    name: "Smart Trash Can with Motion Sensor",
+    priceINR: 2999,
+    priceUSD: 36,
+    link: "https://amzn.to/4euARZe"
+  },
+  {
+    id: "product-electric-jar-opener",
+    name: "Electric Jar Opener",
+    priceINR: 1571,
+    priceUSD: 19,
+    link: "https://amzn.to/44sVwbo"
+  },
+  {
+    id: "product-oil-dispenser",
+    name: "Automatic Oil Dispenser Bottle (with sensor)",
+    priceINR: 304,
+    priceUSD: 4,
+    link: "https://amzn.to/3In9G6p"
+  },
+  {
+    id: "product-drying-rack",
+    name: "Roll-Up Over-Sink Drying Rack",
+    priceINR: 649,
+    priceUSD: 8,
+    link: "https://amzn.to/3GpXMIo"
+  },
+  {
+    id: "product-microwave-cleaner",
+    name: "Microwave Cleaner Steamer (Angry Mama Style)",
+    priceINR: 399,
+    priceUSD: 5,
+    link: "https://amzn.to/4nuE7rE"
+  },
+  {
+    id: "product-ice-tray",
+    name: "Mini Ice Cube Tray with Lid & Scoop",
+    priceINR: 745,
+    priceUSD: 9,
+    link: "https://amzn.to/4klNqY9"
+  },
+  {
+    id: "product-steam-cleaner",
+    name: "NexLev Steam Cleaner",
+    priceINR: 0,
+    priceUSD: 0,
+    link: "https://amzn.to/44bqypt"
+  },
+  {
+    id: "product-cutting-board",
+    name: "2-in-1 Cutting Board with Drain Tray",
+    priceINR: 3397,
+    priceUSD: 41,
+    link: "https://amzn.to/4lbuc8R"
+  },
+  {
+    id: "product-pan-stirrer",
+    name: "Automatic Pan Stirrer with Timer",
+    priceINR: 1299,
+    priceUSD: 16,
+    link: "https://amzn.to/44rdDOR"
+  },
+  {
+    id: "product-grain-dispenser",
+    name: "Wall-Mounted Rice & Grain Dispenser",
+    priceINR: 2299,
+    priceUSD: 28,
+    link: "https://amzn.to/4lBVDsk"
+  },
+  {
+    id: "product-milk-frother",
+    name: "Electric Milk Frother Wand",
+    priceINR: 1299,
+    priceUSD: 16,
+    link: "https://amzn.to/4eycpWQ"
+  },
+  {
+    id: "product-digital-spoon",
+    name: "Digital Measuring Spoon",
+    priceINR: 999,
+    priceUSD: 12,
+    link: "https://amzn.to/45LPtkF"
+  },
+  {
+    id: "product-silicone-lids",
+    name: "Silicone Food Covers (Stretch Lids)",
+    priceINR: 228,
+    priceUSD: 3,
+    link: "https://amzn.to/4ljDu2o"
+  },
+  {
+    id: "product-measuring-spoons",
+    name: "Magnetic Measuring Spoons Set",
+    priceINR: 3960,
+    priceUSD: 48,
+    link: "https://amzn.to/4lx0DOF"
+  },
+  {
+    id: "product-garlic-chopper",
+    name: "Mini Electric Garlic Chopper",
+    priceINR: 1199,
+    priceUSD: 14,
+    link: "https://amzn.to/4lTqxwv"
+  },
+  {
+    id: "product-shelf-organizer",
+    name: "Cupboard/Under-Shelf Basket Organizer",
+    priceINR: 527,
+    priceUSD: 6,
+    link: "https://amzn.to/400tdQd"
+  },
+  {
+    id: "product-airfryer-liners",
+    name: "Silicone Air Fryer Liners (Reusable)",
+    priceINR: 579,
+    priceUSD: 7,
+    link: "https://amzn.to/4km5dOF"
+  }
+{
       id: "inkbird-thermometer",
       name: "INKBIRD Bluetooth Meat Thermometer",
       price: "₹2,090 / $25.18",
